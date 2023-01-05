@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>JS</title>
+  </head>
+  <body>
+    <div id="task1"></div>
+    <table>
+      <tr>
+        <th>Завдання</th>
+        <th></th>
+        <th>Результат</th>
+      </tr>
+      <tr>
+        <td>Завдання №1. Виведення поточної дати та часу</td>
+        <td><button onclick="currentTimeShow()">Виконати</button></td>
+        <td id="timeResult"></td>
+      </tr>
+      <tr>
+        <td>Завдання №2. Виведення дня тижня</td>
+        <td><button onclick="currentDayShow()">Виконати</button></td>
+        <td id="dayResult"></td>
+      </tr>
+      <tr>
+        <td>
+          Завдання №3. Знаходження дати за введеною користувачем к-стю днів
+        </td>
+        <td><input type="text" id="daysAgo" onblur="dateSearch()" /></td>
+        <td><input type="text" id="daysAgoResult" /></td>
+      </tr>
+      <tr>
+        <td>
+          Завдання №4. Знаходження останнього дня місяця за місяцем і роком
+        </td>
+        <td>
+          <input
+            type="text"
+            id="lastdayYear"
+            onblur="lastday()"
+            value="Рік"
+            onclick="this.value=''"
+          />
+          <br /><input
+            type="text"
+            id="lastdayMonth"
+            onblur="lastday()"
+            value="Місяць"
+            onclick="this.value=''"
+          />
+        </td>
+        <td><span type="text" id="lastdayResult" /></td>
+      </tr>
+      <tr>
+        <td>Завдання №5. Виведення секунд від початку дня та до кінця</td>
+        <td><button onclick="secondShow()">Виконати</button></td>
+        <td id="secondResult"></td>
+      </tr>
+      <tr>
+        <td>Завдання №6. Переведення формату дати</td>
+        <td><button onclick="dateShow()">Виконати</button></td>
+        <td id="dateResult"></td>
+      </tr>
+      <tr>
+        <td>Завдання №7. Пошук різниці між двома датами</td>
+        <td>
+          <input
+            id="date1"
+            onblur="dateDifference()"
+            value="DD.MM.YYYY"
+            onclick="if(this.value==='DD.MM.YYYY') this.value=''"
+          />
+          <br />
+          <input
+            id="date2"
+            onblur="dateDifference()"
+            value="DD.MM.YYYY"
+            onclick="if(this.value==='DD.MM.YYYY') this.value=''"
+          />
+        </td>
+        <td id="dateDifferenceResult"></td>
+      </tr>
+      <tr>
+        <td>Завдання №8. Форматування дати</td>
+        <td>
+          <input
+            id="formatDate"
+            onblur="formatDatetask()"
+            value="DD.MM.YYYY"
+            onclick="if(this.value==='DD.MM.YYYY') this.value=''"
+          />
+          <br />
+          <input
+            id="formatTime"
+            onblur="formatDatetask()"
+            value="HH:mm:ss"
+            onclick="if(this.value==='HH:mm:ss') this.value=''"
+          />
+        </td>
+        <td id="formatDateResult"></td>
+      </tr>
+      <tr>
+        <td>Завдання №9. Виведення дати на вказаній мові</td>
+        <td>
+          <input
+            id="Date"
+            onblur="formatLangquageDatetask()"
+            value="DD.MM.YYYY"
+            onclick="if(this.value==='DD.MM.YYYY') this.value=''"
+          />
+
+          <br />
+          <input
+            id="Time"
+            onblur="formatLangquageDatetask()"
+            value="HH:mm:ss"
+            onclick="if(this.value==='HH:mm:ss') this.value=''"
+          />
+          <br />
+          <button onclick="enFormatShow()">en</button>
+          <button onclick="uaFormatShow()">ua</button>
+        </td>
+        <td id="formatLanguageDateResult"></td>
+      </tr>
+    </table>
+    <script src="./script.js"></script>
+  </body>
+</html>
